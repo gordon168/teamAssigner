@@ -44,6 +44,9 @@ body {
     font-weight: bold;
     color: white;
     text-shadow: 1px 1px 2px black;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: border-color 0.5s ease-in-out;
 }
 
 .basketball {
@@ -52,17 +55,11 @@ body {
     height: 40px;
     background-color: #f08023;
     border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 130px;
+    left: 130px;
     background-image: url('https://i.imgur.com/y612e1A.png'); /* Basketball texture */
     background-size: cover;
     transition: transform 1s ease-in-out;
-}
-
-@keyframes roll {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 .teams-container {
@@ -78,4 +75,27 @@ body {
 
 .team h3 {
     margin-top: 0;
+}
+
+@media (max-width: 600px) {
+    .player-circle-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .player-circle {
+        border: none;
+    }
+
+    .player {
+        width: 40px;
+        height: 40px;
+    }
+
+    .basketball {
+        width: 30px;
+        height: 30px;
+        top: 85px;
+        left: 85px;
+    }
 }
