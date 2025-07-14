@@ -1,0 +1,81 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.player-circle-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.player-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px dashed #ccc;
+}
+
+.player {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url('https://i.imgur.com/T5z8vL5.png'); /* Cartoon basketball player */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.basketball {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #f08023;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('https://i.imgur.com/y612e1A.png'); /* Basketball texture */
+    background-size: cover;
+    transition: transform 1s ease-in-out;
+}
+
+@keyframes roll {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.teams-container {
+    margin-top: 20px;
+}
+
+.team {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.team h3 {
+    margin-top: 0;
+}
